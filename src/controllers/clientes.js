@@ -38,10 +38,14 @@ async function add(req, res) {
 }
 
 //a lista vai ser um array de usuarios onde vai listar os clientes
-function listUsers(req, res){
+async function listUsers(req, res){
+    //procurando os usuarios cadastrados da para passar parametros tb como email, senha, etc ClientesModel.find(){ email: '' }
+    //o find vazio vai retornar todos
+    const users = await ClientesModel.find()
+
     res.render('listUsers', {
         title: 'Listagem de usuários!',
-        users: []
+        users,
     })
 }
 

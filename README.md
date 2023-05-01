@@ -27,7 +27,8 @@
 20- Criando as rotas de cliente, e as condições q a rota vai receber fazendo os post e os get tambem da rota (base-7)
 21- Baixando npm install bcrypt para criptograafar a senha do cidadao
 22- Criptografando a senha
-23- 
+23- Criando uma barra de navegação padrão que aparecera em todas as paginas e incluindo as rotas para listar os usuarios
+24- 
 
 
 # Explicação dos termos
