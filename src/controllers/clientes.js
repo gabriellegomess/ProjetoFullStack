@@ -1,9 +1,12 @@
 const ClientesModel = require('../models/clientes')
 const { crypto } = require('../utils/senha')
 
+//caso um dia precise mexer na msg de cadastro é só alterar essa constante ao inves de função por função
+const defaultTitle = 'Cadastro de Clientes'
+
 function index(req, res) {
     res.render('registro', {
-        title: 'Cadastro de Clientes'
+        title: defaultTitle,
     })
 }
 
@@ -34,7 +37,10 @@ async function add(req, res) {
 
     register.save()
 
-    res.send('Cadastro realizado!')
+    res.render('registro', {
+        title: defaultTitle,
+        message: 'Cadastro realizado com sucesso!'
+    })
 }
 
 //a lista vai ser um array de usuarios onde vai listar os clientes

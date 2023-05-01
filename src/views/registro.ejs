@@ -9,6 +9,13 @@
 
     <%- include('partials/navbar.ejs') %>
 
+    <!-- exibir a msg de cadastro realizado com sucesso
+    verificando se a mensagem existe na função que esta passando typeof
+    se for diferente de indefinido-->
+    <% if (typeof message !== 'undefined' ) {%>
+      <%= message %>
+    <% } %>  
+
   <form action="/registro/add" method="post">
     <div>
         <table>
