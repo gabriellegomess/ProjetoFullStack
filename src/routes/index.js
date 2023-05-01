@@ -21,5 +21,9 @@ router.post('/registro/add', ClientesController.add)
 router.get('/list', ClientesController.listUsers)
 
 
+//editar os clientes
+router.get('/edit', ClientesController.indexEdit) //renderizar a pagina
+//router.post('edit', ClientesController.edit) //editar o usuario de fato
+
 //exportando o router
 module.exports = router

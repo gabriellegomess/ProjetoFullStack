@@ -55,9 +55,17 @@ async function listUsers(req, res){
     })
 }
 
+
+async function indexEdit(req, res){
+    res.render('editUsers', {
+        title: 'Editar Usuário'
+    })
+}
+
 //exportando as funções para que elas sejam usadas 
 module.exports = {
     index,
     add,
     listUsers,
+    indexEdit,
 }
