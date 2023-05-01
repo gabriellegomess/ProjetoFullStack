@@ -16,36 +16,36 @@
       <%= message %>
     <% } %>  
 
-  <form action="/edit" method="post">
+  <form action="/edit/<%= user._id%>" method="post">
     <div>
         <table>
             <tr>
               <td><label for="nome">Nome:</label></td>
-              <td><input type="text" id="nome" name="nome" required></td>
+              <td><input type="text" id="nome" name="nome" required placeholder="Digite o seu nome" value="<%= user.nome %>"></td>
             </tr>
             <tr>
               <td><label for="idade">Idade:</label></td>
-              <td><input type="number" id="idade" name="idade" required></td>
+              <td><input type="number" id="idade" name="idade" required placeholder="Digite a sua idade" value="<%= user.idade %>"></td>
             </tr>
             <tr>
               <td><label for="cpf">CPF:</label></td>
-              <td><input type="text" id="cpf" name="cpf" required></td>
+              <td><input type="text" id="cpf" name="cpf" required placeholder="Digite o seu CPF" value="<%= user.cpf %>"></td>
             </tr>
             <tr>
               <td><label for="telefone">Telefone:</label></td>
-              <td><input type="text" id="telefone" name="telefone" required></td>
+              <td><input type="text" id="telefone" name="telefone" required placeholder="Digite o seu telefone" value="<%= user.telefone %>"></td>
             </tr>
             <tr>
               <td><label for="email">E-mail:</label></td>
-              <td><input type="email" id="email" name="email" required></td>
+              <td><input type="email" id="email" name="email" required placeholder="Digite o seu email" value="<%= user.email %>"></td>
             </tr>
-            <tr>
+            <!-- <tr>
               <td><label for="senha">Senha:</label></td>
-              <td><input type="password" id="senha" name="senha" required></td>
+              <td><input type="password" id="senha" name="senha" required placeholder="Digite a senha que deseja" value="<%= user.senha %>"></td>
             </tr>
-            <tr>
+            <tr> -->
               <td><label for="endereco">Endereço:</label></td>
-              <td><input type="text" id="endereco" name="endereco" required></td>
+              <td><input type="text" id="endereco" name="endereco" required placeholder="Digite o seu endereço" value="<%= user.endereco %>"></td>
             </tr>
           </table>
           <br>

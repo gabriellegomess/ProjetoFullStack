@@ -57,8 +57,46 @@ async function listUsers(req, res){
 
 
 async function indexEdit(req, res){
+    //query string sao os parametros q a url recebe
+    const { id } = req.query
+
+    const user = await ClientesModel.findById(id) 
+
     res.render('editUsers', {
-        title: 'Editar Usuário'
+        title: 'Editar Usuário',
+        //retornando na view
+        user,
+    })
+}
+
+async function edit(req, res){
+    const {
+        nome, 
+        idade, 
+        cpf, 
+        telefone, 
+        email, 
+        //senha, 
+        endereco,
+    } = req.body
+
+    const { id } = req.params
+
+    const user = await ClientesModel.findById(id)
+
+    user.nome = nome,
+    user.cpf = cpf,
+    user.telefone = telefone,
+    user.email = email,
+    user. endereco = endereco,
+
+    user.save()
+
+    res.render('editUsers', {
+        title: 'Editar Usuário',
+        //retornando na view
+        user,
+        message: 'Usuário alterado com sucesso!'
     })
 }
 
@@ -68,4 +106,5 @@ module.exports = {
     add,
     listUsers,
     indexEdit,
+    edit,
 }

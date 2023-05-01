@@ -23,7 +23,7 @@ router.get('/list', ClientesController.listUsers)
 
 //editar os clientes
 router.get('/edit', ClientesController.indexEdit) //renderizar a pagina
-//router.post('edit', ClientesController.edit) //editar o usuario de fato
+router.post('/edit/:id', ClientesController.edit) //editar o usuario de fato baseado no parametro q esta recebendo
 
 //exportando o router
 module.exports = router
