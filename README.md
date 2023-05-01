@@ -18,4 +18,9 @@
 13- AEEE FUNCIONOU (ta com o background preto do css e sem erro - commit base 3)
 14- Criação da pasta partials e do arquivo head.ejs 
 15- Removi o head e o script do index e coloquei no head e importei o head.ejs 
-16- 
+
+16- BASE-4
+
+17- Estabelecendo a conexão com o banco de dados e dando um console para ter crtz de que esta conectado
+18- CASO DE ERRO COM O MONGO PARA CONECTAR ENTRAR NO "services" PROCURAR PELO MONGODB 
+19- Conectado ao banco de dados ()
