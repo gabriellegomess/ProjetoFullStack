@@ -28,7 +28,8 @@
 21- Baixando npm install bcrypt para criptograafar a senha do cidadao
 22- Criptografando a senha
 23- Criando uma barra de navegação padrão que aparecera em todas as paginas e incluindo as rotas para listar, alterar, deletar os usuarios
-24- 
+
+24- Rpetir todos os passo a passo para criar o cadastro e etc de Produtos e em seguida linkar os clientes com as respectivas vendas desses produtos
 
 
 # Explicação dos termos
