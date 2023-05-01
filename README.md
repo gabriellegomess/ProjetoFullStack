@@ -11,9 +11,11 @@
 9- Criação da pasta public, arquivos q vao ficar publicos, criando o CSS, e o main.js (separei em pastas para facilitar e não misturar as duas coisas)
 10- Na pasta de css (depois de linkar o main e o css no arquivo html) definindo a cor do body e na pasta main um alerta de ok para ter certeza de que deu td certo
 
+//esse ejs permite rodar em html e vai ter todas as coisas que o html possui e indica que o arquivo é um template escrito em EJS (Embedded JavaScript) (que permite a inserção de JavaScript em HTML).
 11- Testei se estava rodando e deu o erro de q o EJS estava faltando ent (npm i ejs) e ai continuou rodando porem cm erro (e estava localhost:8080)
 
 12- Defini o local correto da pasta views app.set('views', path.join(__dirname, 'views')) (erro resolvido)
-13- AEEE FUNCIONOU (ta com o background preto do css e sem erro - commit base 2)
-14-
-
+13- AEEE FUNCIONOU (ta com o background preto do css e sem erro - commit base 3)
+14- Criação da pasta partials e do arquivo head.ejs 
+15- Removi o head e o script do index e coloquei no head e importei o head.ejs 
+16- 
