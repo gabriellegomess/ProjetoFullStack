@@ -2,17 +2,21 @@
 //importar o moongose para se conectar no banco de dados 
 const mongoose = require("mongoose");
 
-//se conectando no banco de dados
+//se conectando no banco de dados / Define a URL do banco de dados que será utilizado na conexão
 const db = "mongodb://0.0.0.0:27017/projeto";
 
+// Cria uma função assíncrona autoexecutável que tentará se conectar ao banco de dados
 (async () => {
     try {
+// Aguarda a conexão com o banco de dados utilizando as opções especificadas (os "use" são coisas que o mongo precisa para conectar)
         await mongoose.connect(db, {
             useNewUrlParser: true,
             useUnifiedTopology: true,
         });
+// Se a conexão for estabelecida com sucesso, exibe uma mensagem de sucesso
         console.log("Conexão com o banco de dados estabelecida com sucesso.");
     } catch (err) {
+// Se houver algum erro durante a conexão, exibe uma mensagem de erro com a descrição do erro
         console.error("Erro ao conectar-se ao banco de dados: ", err);
     }
 })(); 

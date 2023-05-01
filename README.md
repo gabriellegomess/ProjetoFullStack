@@ -23,4 +23,22 @@
 
 17- Estabelecendo a conexão com o banco de dados e dando um console para ter crtz de que esta conectado
 18- CASO DE ERRO COM O MONGO PARA CONECTAR ENTRAR NO "services" PROCURAR PELO MONGODB 
-19- Conectado ao banco de dados ()
+19- Conectado ao banco de dados (base-5)
+
+
+# Explicação dos termos
+
+# path e Dirname
+
+O __dirname é uma constante global do Node.js que representa o caminho absoluto do diretório atual do arquivo. É útil para quando se deseja especificar o caminho para um arquivo em relação ao diretório atual.
+
+O path.join() é um método do módulo Node.js path que retorna o caminho concatenado de vários argumentos, independentemente do sistema operacional. No caso do exemplo, é utilizado para unir o diretório atual com a pasta 'public', criando assim um caminho absoluto para a pasta de arquivos estáticos.
+
+O código app.use(express.static(path.join(__dirname, 'public'))) é utilizado para servir arquivos estáticos, como imagens, arquivos CSS e JavaScript, etc. A partir desse momento, o Express irá automaticamente servir qualquer arquivo na pasta 'public' quando uma solicitação for feita para o servidor com o nome do arquivo no caminho da URL.
+
+# Middleware
+
+Middleware é um termo utilizado em desenvolvimento de software para referir-se a uma camada intermediária entre diferentes componentes de uma aplicação. Em outras palavras, é uma função que recebe uma requisição HTTP, realiza alguma operação (como validar dados, autenticar um usuário, entre outras), e passa a requisição para a próxima função ou camada de middleware, ou para a rota correspondente.
+
+No contexto do Express, um middleware é uma função que tem acesso aos objetos request (req), response (res) e next e é executada em sequência com outras funções antes de chegar na rota final. É possível adicionar middleware em uma aplicação do Express através do método app.use(). Isso permite adicionar funcionalidades extras a uma aplicação, tais como autenticação, validação de dados, logging, entre outras.
+

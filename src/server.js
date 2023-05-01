@@ -27,7 +27,7 @@ app.use(express.static(path.join(__dirname, 'public')))
 app.use(express.urlencoded({ extended: true}))
 
 
-//rotas da aplicação
+//rotas da aplicação Este trecho de código implementa uma rota HTTP que define o comportamento do servidor quando ele recebe uma requisição GET na raiz da URL
 app.get('/', (req, res) => {
     res.render('index', {
         title: 'Titulo Teste'
