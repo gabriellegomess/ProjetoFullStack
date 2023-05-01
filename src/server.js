@@ -15,6 +15,8 @@ const routes = require('./routes')
 //iniciando o express
 const app = express()
 
+
+
 //conexao com o banco de dados (primeira tentativa)
 //db.connect()
 

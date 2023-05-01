@@ -1,6 +1,7 @@
 const ClientesModel = require('../models/clientes')
+const { crypto } = require('../utils/senha')
 
-function add(req, res) {
+async function add(req, res) {
     //console.log('Ok funcionou')
     const {
         nome, 
@@ -12,13 +13,16 @@ function add(req, res) {
         endereco,
     } = req.body
 
+//atribuindo a criptografia da senha antes de ser passada para o banco de dados
+    const senhaCrypto = await crypto(senha)
+
     const register = new ClientesModel({
         nome, 
         idade, 
         cpf, 
         telefone, 
         email, 
-        senha, 
+        senha: senhaCrypto, 
         endereco,
     })
 
