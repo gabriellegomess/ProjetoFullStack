@@ -23,7 +23,7 @@
 
 17- Estabelecendo a conexão com o banco de dados e dando um console para ter crtz de que esta conectado
 18- CASO DE ERRO COM O MONGO PARA CONECTAR ENTRAR NO "services" PROCURAR PELO MONGODB 
-19- Conectado ao banco de dados (base-5)
+19- Conectado ao banco de dados (base-6)
 
 
 # Explicação dos termos

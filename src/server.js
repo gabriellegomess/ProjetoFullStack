@@ -7,6 +7,10 @@ const path = require('path')
 //conexao com o banco de dados
 const db = require('./database')
 
+//chamando o arquivos das rotas para rodar a aplicação
+const routes = require('./routes')
+
+
 //iniciando o express
 const app = express()
 
@@ -27,12 +31,8 @@ app.use(express.static(path.join(__dirname, 'public')))
 app.use(express.urlencoded({ extended: true}))
 
 
-//rotas da aplicação Este trecho de código implementa uma rota HTTP que define o comportamento do servidor quando ele recebe uma requisição GET na raiz da URL
-app.get('/', (req, res) => {
-    res.render('index', {
-        title: 'Titulo Teste'
-    })
-})
+//usando as rotas da api //definindo as rotas
+app.use('/', routes)
 
 //erro 404 (not found)
 app.use((req, res) => { //middleware
