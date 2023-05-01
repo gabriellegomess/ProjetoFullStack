@@ -20,19 +20,6 @@ const app = express()
 
 
 
-/*
-const register = new Model({
-    nome: 'Thiago',
-    idade: 15,
-    cpf: '369852',
-    telefone: 4444,
-    email: 't@g.com',
-    senha: 'unicaSenha',
-    endereco: 'Rua D'
-}) */
-
-//register.save()
-
 //definindo o template engine
 app.set('view engine', 'ejs')
 //especificando o local correto da pasta view (o path vai especificar a biblioteca/pasta/etc q vai estar, 'views') //o dirname ja esta na pasta src

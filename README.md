@@ -24,6 +24,8 @@
 17- Estabelecendo a conexão com o banco de dados e dando um console para ter crtz de que esta conectado
 18- CASO DE ERRO COM O MONGO PARA CONECTAR ENTRAR NO "services" PROCURAR PELO MONGODB 
 19- Conectado ao banco de dados (base-6)
+20- Criando as rotas de cliente, e as condições q a rota vai receber fazendo os post e os get tambem da rota (base-7)
+21- 
 
 
 # Explicação dos termos
