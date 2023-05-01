@@ -4,11 +4,14 @@
 const express = require('express')
 const path = require('path')
 
+//iniciando o express
 const app = express()
 
 
 //definindo o template engine
 app.set('view engine', 'ejs')
+//especificando o local correto da pasta view (o path vai especificar a biblioteca/pasta/etc q vai estar, 'views') //o dirname ja esta na pasta src
+app.set('views', path.join(__dirname, 'views'))
 
 
 //definindo os arquivos públicos
