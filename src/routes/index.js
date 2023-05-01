@@ -7,5 +7,17 @@ router.get('/', (req, res) => {
     })
 })
 
+router.get('/registro', (req, res) => {
+    res.render('registro', {
+        title: 'Cadastro de Clientes'
+    })
+})
+
+router.post('/registro/new', (req, res) => {
+    res.render('registro', {
+        title: 'Cadastro de Clientes'
+    })
+})
+
 //exportando o router
 module.exports = router

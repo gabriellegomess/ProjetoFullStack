@@ -4,6 +4,7 @@
 const express = require('express')
 const path = require('path')
 
+
 //conexao com o banco de dados
 const db = require('./database')
 
@@ -16,6 +17,21 @@ const app = express()
 
 //conexao com o banco de dados (primeira tentativa)
 //db.connect()
+
+
+
+/*
+const register = new Model({
+    nome: 'Thiago',
+    idade: 15,
+    cpf: '369852',
+    telefone: 4444,
+    email: 't@g.com',
+    senha: 'unicaSenha',
+    endereco: 'Rua D'
+}) */
+
+//register.save()
 
 //definindo o template engine
 app.set('view engine', 'ejs')

@@ -1,4 +1,8 @@
 /*definindo a cor de fundo do nosso body */
 body{
-    background-color:black;
+    background-color:rgb(243, 243, 243);
+}
+
+div{
+    background-color: aquamarine;
 }
