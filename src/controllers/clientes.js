@@ -100,6 +100,18 @@ async function edit(req, res){
     })
 }
 
+
+async function excluir(req, res){
+    const { id } = req.params
+
+    const excluir = await ClientesModel.deleteOne({_id: id})
+//tratando se deu sucesso na exclusão
+    if(excluir.ok) {
+        res.redirect('/list') //redirecionando se tiver dado certo
+    }
+}
+
+
 //exportando as funções para que elas sejam usadas 
 module.exports = {
     index,
@@ -107,4 +119,5 @@ module.exports = {
     listUsers,
     indexEdit,
     edit,
+    excluir,
 }
