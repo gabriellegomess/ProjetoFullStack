@@ -21,7 +21,6 @@ const app = express()
 //db.connect()
 
 
-
 //definindo o template engine
 app.set('view engine', 'ejs')
 //especificando o local correto da pasta view (o path vai especificar a biblioteca/pasta/etc q vai estar, 'views') //o dirname ja esta na pasta src
