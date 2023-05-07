@@ -9,22 +9,22 @@
     <h1>Lista de Resumos</h1>
 
     <ul>
-
-       <% produtos.forEach((produto) => { %>
-    <li> 
-        <%= produto.nome %> - <%= produto.marca %> - <%=produto.cod %> - <%=produto.idp %> <br><br>
-        
-    </li>
-    <%  }) %>
-
-
-    <% users.forEach((user) => { %>
-        <li> 
-            <%= user.nome %> - <%= user.cpf %> - <%=user.idade %> - <%=user.telefone %> - <%=user.email %> - <%=user.endereco %> <br><br>
-             
-        </li>
-        <%  }) %>
-
+    <p> Produtos </p>
+        <% if (produtos && produtos.length > 0) { %>
+            <% produtos.forEach((produto) => { %>
+                <li> 
+                    <%= produto.nome %> - <%= produto.marca %> - <%= produto.cod %> - <%= produto.idp %> <br><br>
+                </li>
+            <% }) %>
+        <% } %>
+<p> Clientes </p>
+        <% if (clientes && clientes.length > 0) { %>
+            <% clientes.forEach((cliente) => { %>
+                <li> 
+                    <%= cliente.nome %> - <%= cliente.cpf %> - <%= cliente.idade %> - <%= cliente.telefone %> - <%= cliente.email %> - <%= cliente.endereco %> <br><br>
+                </li>
+            <% }) %>
+        <% } %>
     </ul>
 
     <%- include('partials/foot.ejs') %>
