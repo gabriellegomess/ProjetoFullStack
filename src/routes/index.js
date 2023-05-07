@@ -92,6 +92,9 @@ router.get('/formulario', async function(req, res) {
     }
   });
   
+//===========RESUMO DA VENDA============
+router.get('/resumos', ResumosController.listResumos);
+
 
 //exportando o router
 module.exports = router
