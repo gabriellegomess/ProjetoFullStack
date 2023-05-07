@@ -1,5 +1,7 @@
 # ProjetoFullStack
- 
+
+# rodar npm run dev ( localhost:8080 ) 
+
 1- instalação do package.json (npm init -y)
 2- Instalação do nodemon (npm install nodemon --save-dev)
 3- Instalação do express e do mongoose (npm install express mongoose) (a no package json dentro do scripts adiciona:  "dev": "nodemon src/server.js", ) pois o nodemon só roda em ambiente de dev e o start vai iniciar a aplicação de um servidor online
