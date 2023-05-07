@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<%- include('partials/head.ejs') %>
+
+<body>
+    <%- include('partials/navbar.ejs') %>
+
+    <h1>Lista de Resumos</h1>
+
+    <ul>
+
+       <% produtos.forEach((produto) => { %>
+    <li> 
+        <%= produto.nome %> - <%= produto.marca %> - <%=produto.cod %> - <%=produto.idp %> <br><br>
+        
+    </li>
+    <%  }) %>
+
+
+    <% users.forEach((user) => { %>
+        <li> 
+            <%= user.nome %> - <%= user.cpf %> - <%=user.idade %> - <%=user.telefone %> - <%=user.email %> - <%=user.endereco %> <br><br>
+             
+        </li>
+        <%  }) %>
+
+    </ul>
+
+    <%- include('partials/foot.ejs') %>
+</body>
+
+</html>

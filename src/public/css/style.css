@@ -1,14 +1,14 @@
 /*definindo a cor de fundo do nosso body */
 body{
-   /* background-color:rgb(243, 207, 243); */
-   background-color: rgb(253, 199, 209);
+   /*background-color: rgb(253, 199, 209);*/
+   background-color: rgb(174, 241, 243);
 }
 
 .link{
     font-family: sans-serif;
     font-style: italic;
     border: 2px black solid;
-    background-color: pink;
+    background-color:/* pink*/ rgb(158, 249, 255);
 }
 
 .pgIni{
