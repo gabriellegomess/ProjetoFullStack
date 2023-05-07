@@ -8,45 +8,12 @@ const ProdutosController = require('../controllers/produtos')
 const ResumosModel = require('../models/resumos')
 const IndexController = require('../controllers/index')
 
-async function createResumo(req, res) {
-    try {
-      const { clienteId, produtosIds } = req.body;
-  
-      // Verificar se o cliente e os produtos existem
-      const cliente = await ClientesModel.findById(clienteId);
-      const produtos = await ProdutosModel.find({ _id: { $in: produtosIds } });
-  
-      if (!cliente || produtos.length !== produtosIds.length) {
-        // Cliente ou produtos não encontrados, retornar erro
-        return res.status(404).json({ error: 'Cliente ou produtos não encontrados' });
-      }
-  
-      // Mapear os nomes dos produtos
-      const produtosNomes = produtos.map(produto => produto.nome);
-  
-      // Criar o resumo com os dados fornecidos
-      const resumo = new ResumosModel({
-        cliente: clienteId,
-        produtos: produtos.map(produto => ({ produto: produto._id, nome: produto.nome }))
-      });
-  
-      // Salvar o resumo no banco de dados
-      await resumo.save();
-  
-      // Retornar uma resposta de sucesso
-      return res.status(200).json({ message: 'Resumo criado com sucesso', clienteNome: cliente.nome, produtosNomes });
-    } catch (error) {
-      // Tratar erros e retornar uma resposta de erro adequada
-      console.error('Erro ao criar resumo:', error);
-      return res.status(500).json({ error: 'Erro ao criar resumo' });
-    }
-  }
   
   module.exports = {
     createResumo
   };
 
-/*
+
 async function createResumo(req, res) {
     try {
       const { clienteId, produtosIds } = req.body;
@@ -94,4 +61,3 @@ async function createResumo(req, res) {
     createResumo
   };
 
-*/

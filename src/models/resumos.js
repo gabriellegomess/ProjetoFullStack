@@ -7,30 +7,6 @@ const ProdutosModel = require('../models/produtos')
 const ResumosModel = require('../models/resumos')
 const IndexController = require('../controllers/index')
 
-const mongoose = require('mongoose');
-
-const resumoSchema = new mongoose.Schema({
-  cliente: {
-    type: mongoose.Schema.Types.ObjectId,
-    ref: 'Cliente',
-    required: true
-  },
-  produtos: [{
-    produto: {
-      type: mongoose.Schema.Types.ObjectId,
-      ref: 'Produto',
-      required: true
-    },
-    nome: String // Adicione o campo "nome" para armazenar o nome do produto
-  }]
-});
-
-const Resumo = mongoose.model('Resumo', resumoSchema);
-
-module.exports = Resumo;
-
-/*
-
 const resumoSchema = new mongoose.Schema({
     cliente: {
       type: mongoose.Schema.Types.ObjectId,
@@ -48,4 +24,4 @@ const resumoSchema = new mongoose.Schema({
 
 const Resumo = mongoose.model('Resumo', resumoSchema);
 
-module.exports = Resumo; */
+module.exports = Resumo; 
