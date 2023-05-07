@@ -8,15 +8,9 @@ const ProdutosController = require('../controllers/produtos')
 const ResumosModel = require('../models/resumos')
 const IndexController = require('../controllers/index')
 
-  
-  module.exports = {
-    createResumo
-  };
-
-
 async function createResumo(req, res) {
     try {
-      const { clienteId, produtosIds } = req.body;
+      const { clienteId, produtosIds } = req.body; //vai pegar o id do cliente e do produto para passar 
   
       // Verificar se o cliente e os produtos existem
       const cliente = await ClientesModel.findById(clienteId);

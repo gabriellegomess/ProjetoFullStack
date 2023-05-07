@@ -9,17 +9,16 @@ const IndexController = require('../controllers/index')
 
 const resumoSchema = new mongoose.Schema({
     cliente: {
-      type: mongoose.Schema.Types.ObjectId,
-      ref: 'Cliente',
+      type: mongoose.Schema.Types.ObjectId, //no banco de dados ele ta pegando os objetos por id
+      ref: 'clientes', //coleção clientes
       required: true
     },
     produtos: [{
-      type: mongoose.Schema.Types.ObjectId,
-      ref: 'Produto',
+      type: mongoose.Schema.Types.ObjectId,//no banco de dados ele ta pegando os objetos por id
+      ref: 'produtos', //coleção produtos
       required: true
     }]
   });
-
 
 
 const Resumo = mongoose.model('Resumo', resumoSchema);
