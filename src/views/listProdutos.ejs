@@ -15,10 +15,11 @@
 <ul> 
     <% produtos.forEach((produto) => { %>
     <li> 
-        <%= produto.nome %> - <%= produto.marca %> - <%=produto.cod %> - <%=produto.idp %> -
-        <a href="/editProdutos?id=<%= produto._id %>"> [editar]</a> -
+        <%= produto.nome %> - <%= produto.marca %> - <%=produto.cod %> - <%=produto.idp %> <br><br>
+        <a href="/editProdutos?id=<%= produto._id %>"> <p>Editar</p></a> 
         <form action="/removeProdutos/<%= produto._id %>" method="post" style="display: inline">
             <button type="submit" onclick="return confirm('Tem certeza que deseja excluir esse produto?')">Excluir</button>
+            <hr>
         </form>     
     </li>
     <%  }) %>

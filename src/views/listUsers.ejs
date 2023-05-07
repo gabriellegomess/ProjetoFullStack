@@ -15,10 +15,11 @@
 <ul> 
     <% users.forEach((user) => { %>
     <li> 
-        <%= user.nome %> - <%= user.cpf %> - <%=user.idade %> - <%=user.telefone %> - <%=user.email %> - <%=user.endereco %> -
-        <a href="/edit?id=<%= user._id %>"> [editar]</a> -
+        <%= user.nome %> - <%= user.cpf %> - <%=user.idade %> - <%=user.telefone %> - <%=user.email %> - <%=user.endereco %> <br><br>
+        <a href="/edit?id=<%= user._id %>"> <p>Editar</p></a> 
         <form action="/remove/<%= user._id %>" method="post" style="display: inline">
             <button type="submit" onclick="return confirm('Tem certeza que deseja excluir esse cliente?')">Excluir</button>
+            <hr>
         </form>     
     </li>
     <%  }) %>

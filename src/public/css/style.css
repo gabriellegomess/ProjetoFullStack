@@ -3,6 +3,50 @@ body{
     background-color:rgb(243, 207, 243);
 }
 
-div{
-    background-color: aquamarine;
+.clienteCadastro{
+    width: 50vw;
+    height: 50vh;
+    margin: 20px auto;
+    padding: 20px;
+    border: 2px solid black;
+    border-radius: 10px;
+    background-image: var(--degrade);
+    box-shadow: 0 5px 7px rgba(0, 0, 0, 0.1);
+    text-align:center;
+    background-color: pink;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-style: italic;
+}
+
+.produtoCadastro{
+    width: 50vw;
+    height: 50vh;
+    margin: 20px auto;
+    padding: 20px;
+    border: 2px solid black;
+    border-radius: 10px;
+    background-image: var(--degrade);
+    box-shadow: 0 5px 7px rgba(0, 0, 0, 0.1);
+    text-align:center;
+    background-color: pink;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-style: italic;
+}
+
+
+button{
+    background-color: pink;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-style: italic;
+}
+
+p{
+    background-color: pink;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-style: italic;
+    border: 2px solid black;
+    width: 55px;
+    height: 20px;
+    font-size: small;
+    text-align:center;
 }
