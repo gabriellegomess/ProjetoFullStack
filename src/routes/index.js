@@ -2,6 +2,7 @@ const router = require('express').Router() //importando o metodo router do expre
 
 
 const ClientesController = require('../controllers/clientes')
+const ProdutosController = require('../controllers/produtos')
 const IndexController = require('../controllers/index')
 //rotas da aplicação Este trecho de código implementa uma rota HTTP que define o comportamento do servidor quando ele recebe uma requisição GET na raiz da URL
 
@@ -9,6 +10,7 @@ const IndexController = require('../controllers/index')
 //"pagina inicial"
 router.get('/', IndexController.index)
 
+//===========CLIENTE============
 
 //registro (esse vai retornar a msg de que o cadastro foi realizado)
 router.get('/registro', ClientesController.index)
@@ -27,5 +29,21 @@ router.post('/edit/:id', ClientesController.edit) //editar o usuario de fato bas
 
 //excluidar usuario
 router.post('/remove/:id', ClientesController.excluir)
+
+
+//===========PRODUTO============
+
+router.get('/registroProdutos', ProdutosController.index)
+
+router.post('/registroProdutos/add', ProdutosController.add)
+
+router.get('/listProdutos', ProdutosController.listProdutos)
+
+router.get('/editProdutos', ProdutosController.indexEdit)
+router.post('/editProdutos/:id', ProdutosController.edit)
+
+router.post('/removeProdutos/:id', ProdutosController.excluir)
+
+
 //exportando o router
 module.exports = router
