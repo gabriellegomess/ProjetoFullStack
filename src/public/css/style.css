@@ -72,3 +72,23 @@ p{
     font-size: small;
     text-align:center;
 }
+
+.produtoCss{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-style: italic;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin-top: -45px;
+  
+}
+
+.clienteCss{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-style: italic;
+    align-items: center;
+    display: flex;
+    justify-content: left;
+    margin-left: 300px;
+    margin-top: 62px;
+}
