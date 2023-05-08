@@ -13,7 +13,7 @@ async function createResumo(req, res) {
       const { clienteId, produtosIds } = req.body; //vai pegar o id do cliente e do produto para passar 
   
       // Verificar se o cliente e os produtos existem
-      const cliente = await ClientesModel.findById(clienteId);
+      const cliente = await ClientesModel.findById(clienteId); //esta verificando se eles existem
       const produtos = await ProdutosModel.find({ _id: { $in: produtosIds } });
   
       if (!cliente || produtos.length !== produtosIds.length) {
@@ -21,11 +21,11 @@ async function createResumo(req, res) {
         return res.status(404).json({ error: 'Cliente ou produtos não encontrados' });
       }
   
-      // Obter os nomes do cliente e dos produtos
+      // Obtendo os nomes do cliente e dos produtos
       const clienteNome = cliente.nome;
       const produtosNomes = produtos.map(produto => produto.nome);
   
-      // Criar o resumo com os dados fornecidos
+      // Criando o resumo com os dados fornecidos
       const resumo = new ResumoModel({
         cliente: clienteId,
         produtos: produtosIds
@@ -50,7 +50,7 @@ async function createResumo(req, res) {
       });
     }
   }
-
+//lista de resumo
   async function listResumos(req, res) {
     try {
       const resumos = await ResumosModel.find().populate('cliente produtos');
