@@ -4,30 +4,20 @@
 <%- include('partials/head.ejs') %>
 
 <body>
-    <%- include('partials/navbar.ejs') %>
+  <%- include('partials/navbar.ejs') %>
 
-    <h1>Lista de Resumos</h1>
+  <h1>Lista de Resumos</h1>
 
-    <ul>
+  <ul>
+    <% resumos.forEach((resumo) => { %>
+      <li>
+        <strong>Cliente:</strong> <%= resumo.cliente.nome %><br>
+        <strong>Produto:</strong> <%= resumo.produto.nome %> - <%= resumo.produto.marca %> - <%= resumo.produto.cod %> - <%= resumo.produto.idp %><br><br>
+      </li>
+    <% }) %>
+  </ul>
 
-       <% produtos.forEach((produto) => { %>
-    <li> 
-        <%= produto.nome %> - <%= produto.marca %> - <%=produto.cod %> - <%=produto.idp %> <br><br>
-        
-    </li>
-    <%  }) %>
-
-
-    <% users.forEach((user) => { %>
-        <li> 
-            <%= user.nome %> - <%= user.cpf %> - <%=user.idade %> - <%=user.telefone %> - <%=user.email %> - <%=user.endereco %> <br><br>
-             
-        </li>
-        <%  }) %>
-
-    </ul>
-
-    <%- include('partials/foot.ejs') %>
+  <%- include('partials/foot.ejs') %>
 </body>
 
 </html>

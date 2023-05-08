@@ -50,8 +50,21 @@ async function createResumo(req, res) {
       });
     }
   }
+
+  async function listResumos(req, res) {
+    try {
+      const resumos = await ResumosModel.find().populate('cliente produtos');
+      res.render('resumos', {
+        title: 'Lista de Resumos',
+        resumos: resumos
+      });
+    } catch (error) {
+      res.status(500).send('Erro ao carregar a lista de resumos');
+    }
+  }
   
   module.exports = {
-    createResumo
+    createResumo,
+    listResumos,
   };
 
