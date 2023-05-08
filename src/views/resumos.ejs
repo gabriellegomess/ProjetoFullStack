@@ -12,9 +12,9 @@
     <% resumos.forEach((resumo) => { %>
       <li>
         <% if (resumo.cliente) { %>
-          <strong>Cliente:</strong> <%= resumo.cliente.nome %><br>
+          <strong>Cliente:</strong> <%= resumo.cliente.nome %> - CPF: <%= resumo.cliente.cpf %><br>
         <% } %>
-        <strong>Produtos:</strong><br>
+        <strong class="resumo">Produtos:</strong><br>
         <ul>
           <% resumo.produtos.forEach((produto) => { %>
             <li>
