@@ -1,6 +1,10 @@
 # ProjetoFullStack
 
+# !!!!!!!!!!!!!!!!!!!!!
+
 # rodar npm run dev ( localhost:8080 ) 
+# !!!!!!!!!!!!!!!!!!!!!
+
 
 1- instalação do package.json (npm init -y)
 2- Instalação do nodemon (npm install nodemon --save-dev)
@@ -33,6 +37,7 @@
 
 24- Rpetir todos os passo a passo para criar o cadastro e etc de Produtos e em seguida linkar os clientes com as respectivas vendas desses produtos
 
+25- Criando o controller, model, view dos Resumos das vendas 
 
 # Explicação dos termos
 
