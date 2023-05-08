@@ -86,6 +86,7 @@ async function edit(req, res){
     const user = await ClientesModel.findById(id)
 
     user.nome = nome,
+    user.idade = idade,
     user.cpf = cpf,
     user.telefone = telefone,
     user.email = email,
