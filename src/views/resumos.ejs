@@ -11,8 +11,17 @@
   <ul>
     <% resumos.forEach((resumo) => { %>
       <li>
-        <strong>Cliente:</strong> <%= resumo.cliente.nome %><br>
-        <strong>Produto:</strong> <%= resumo.produto.nome %> - <%= resumo.produto.marca %> - <%= resumo.produto.cod %> - <%= resumo.produto.idp %><br><br>
+        <% if (resumo.cliente) { %>
+          <strong>Cliente:</strong> <%= resumo.cliente.nome %><br>
+        <% } %>
+        <strong>Produtos:</strong><br>
+        <ul>
+          <% resumo.produtos.forEach((produto) => { %>
+            <li>
+              <%= produto.nome %> - <%= produto.marca %> - <%= produto.cod %> - <%= produto.idp %>
+            </li>
+          <% }) %>
+        </ul>
       </li>
     <% }) %>
   </ul>
