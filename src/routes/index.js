@@ -2,11 +2,12 @@ const router = require('express').Router() //importando o metodo router do expre
 
 
 const ClientesController = require('../controllers/clientes')
-const ProdutosController = require('../controllers/produtos')
 const ClientesModel = require('../models/clientes')
+const ProdutosController = require('../controllers/produtos')
 const ProdutosModel = require('../models/produtos')
-const ResumosModel = require('../models/resumos')
+const ResumosModel = require('../models/resumos');
 const IndexController = require('../controllers/index')
+const ResumosController = require('../controllers/resumos');
 //rotas da aplicação Este trecho de código implementa uma rota HTTP que define o comportamento do servidor quando ele recebe uma requisição GET na raiz da URL
 
 
@@ -52,6 +53,9 @@ router.post('/removeProdutos/:id', ProdutosController.excluir)
 
 //===========VENDA============
 
+router.get('/resumos', ResumosController.listResumos);
+
+
 router.get('/formulario', async function(req, res) {
     try {
       const clientes = await ClientesModel.find();
@@ -89,6 +93,19 @@ router.get('/formulario', async function(req, res) {
       res.render('error', {
         message: 'Erro ao enviar o formulário. Por favor, tente novamente.'
       });
+    }
+  }); 
+
+
+  router.get('/resumos', async function(req, res) {
+    try {
+      const resumos = await ResumosModel.find().populate('clientes produtos')
+      res.render('resumos', {
+        title: 'Lista de Resumos',
+        resumos: resumos
+      });
+    } catch (error) {
+      res.status(500).send('Erro ao carregar a lista de resumos');
     }
   });
   
